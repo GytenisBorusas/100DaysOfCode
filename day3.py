@@ -35,18 +35,39 @@ name2 = input() # What is their name?
 # 🚨 Don't change the code above 👆
 # Write your code below this line 👇
 
+name1 = name1.lower()
+name2 = name2.lower()
+
 score1 = 0
 score2 = 0
 
-letter_list = ("t", "r", "u", "e", "l", "o"", "v"", "e")
+true_list = ["t", "r", "u", "e"]
+love_list = [ "l", "o", "v", "e"]
 
 
-for letters in name1:
-    if name1 == letter_list:
-        score1 =+ 1
-    
-for letters in name2:
-    if name2 == letter_list:
-        score2 =+ 1
+for letter in name1:
+    if letter in true_list:
+        score1 += 1
+
+for letter in name2:
+    if letter in true_list:
+        score1 += 1
         
-print(f"{score1} {score2}")
+    
+for letter in name1:
+    if letter in love_list:
+        score2 += 1
+
+for letter in name2:
+    if letter in love_list:
+        score2 += 1
+        
+        
+sum = str(score1) + str(score2)
+
+if (int(sum) < 10) or (int(sum) > 90):
+    print(f"Your score is {sum}, you go together like coke and mentos.")
+elif (int(sum) > 40) and (int(sum) < 50):
+    print(f"Your score is {sum}, you are alright together.")
+else:
+    print(f"Your score is {sum}.")
