@@ -1,4 +1,5 @@
 import random
+from replit import clear
 from hangman_art import logo, stages 
 from hangman_words import word_list
 
@@ -19,10 +20,12 @@ lives = 6
 while ("_" in display) and (lives > 0):
     print(stages[lives])
     print(f"{' '.join(display)}\n")
-    print(f"You have {lives} lives left.")
+    # print(f"You have {lives} lives left.")
     if len(guessed_letter_list) > 0:
         print(f"You have already tried [{' '.join(guessed_letter_list)}] letter(s).\n")
     guess = input("Guess a letter: ").lower()
+    
+    clear()
        
     if guess in guessed_letter_list:
         print(f'You have already guessed "{guess}" before. Try a different letter.')
