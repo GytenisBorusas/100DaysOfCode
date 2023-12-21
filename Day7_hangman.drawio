@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-21T15:52:01.658Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="eAtshWElI7nrY5ncIO-s" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-21T15:54:22.735Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Cr89HBwTznntix2IaNTp" version="22.1.11" type="github">
   <diagram name="Page-1" id="UwA9kkwzvts-CEnSy01a">
     <mxGraphModel dx="699" dy="1866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -40,6 +40,19 @@
         <mxCell id="pGj__D-RnTbgJRV-CKXR-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pGj__D-RnTbgJRV-CKXR-1" target="Swpq0V5sXKugDDHcBO7T-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pGj__D-RnTbgJRV-CKXR-1" target="pGj__D-RnTbgJRV-CKXR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-30" value="You won!&lt;br&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pGj__D-RnTbgJRV-CKXR-29">
+          <mxGeometry x="-0.0519" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-33" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pGj__D-RnTbgJRV-CKXR-29">
+          <mxGeometry x="-0.7961" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="pGj__D-RnTbgJRV-CKXR-1" value="Check if the entire word uncoverred" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="570" width="120" height="60" as="geometry" />
         </mxCell>
@@ -52,11 +65,30 @@
         <mxCell id="pGj__D-RnTbgJRV-CKXR-3" value="Yes&lt;br&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="pGj__D-RnTbgJRV-CKXR-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-4" value="You won!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="690" width="120" height="60" as="geometry" />
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-4" value="End of the game" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="750" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pGj__D-RnTbgJRV-CKXR-8" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="100" y="338" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pGj__D-RnTbgJRV-CKXR-11" target="pGj__D-RnTbgJRV-CKXR-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="480" />
+              <mxPoint x="560" y="690" />
+              <mxPoint x="370" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-32" value="You lost!&lt;br&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pGj__D-RnTbgJRV-CKXR-31">
+          <mxGeometry x="0.4956" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pGj__D-RnTbgJRV-CKXR-34" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pGj__D-RnTbgJRV-CKXR-31">
+          <mxGeometry x="-0.8221" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="pGj__D-RnTbgJRV-CKXR-11" value="Check if there are any lives left?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="450" width="120" height="60" as="geometry" />
@@ -84,18 +116,6 @@
         <mxCell id="pGj__D-RnTbgJRV-CKXR-14" value="Draw a figure&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="570" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-16" value="You lost!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="450" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="pGj__D-RnTbgJRV-CKXR-16">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="440" y="480" as="sourcePoint" />
-            <mxPoint x="480" y="540" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-18" value="No&lt;br&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="pGj__D-RnTbgJRV-CKXR-17">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="pGj__D-RnTbgJRV-CKXR-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pGj__D-RnTbgJRV-CKXR-21" target="Swpq0V5sXKugDDHcBO7T-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -110,15 +130,6 @@
         </mxCell>
         <mxCell id="pGj__D-RnTbgJRV-CKXR-25" value="Replace the blank with the letter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="450" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="219.41" y="630" as="sourcePoint" />
-            <mxPoint x="219.41" y="690" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pGj__D-RnTbgJRV-CKXR-28" value="Yes&lt;br&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="pGj__D-RnTbgJRV-CKXR-27">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
