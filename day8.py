@@ -51,7 +51,7 @@
 
 # -------------- Homework exercise: --------------
 
-from art import logo
+from day8_art import logo
 
 
 

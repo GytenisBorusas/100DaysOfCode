@@ -1,7 +1,7 @@
 import random
 from replit import clear
-from hangman_art import logo, stages 
-from hangman_words import word_list
+from day7_hangman_art import logo, stages 
+from day7_hangman_words import word_list
 
 
 chosen_word = random.choice(word_list)

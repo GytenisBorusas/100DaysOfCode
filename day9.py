@@ -62,7 +62,7 @@
 # print(student_grades)
 
 
-# -------------- Third class exercise: --------------
+# -------------- Class work: --------------
 
 
 # #Nesting Dictionary in a Dictionary
@@ -87,37 +87,103 @@
 # },
 # ]
 
+# -------------- Third class exercise: --------------
+
+
+# country = input() # Add country name
+# visits = int(input()) # Number of visits
+# list_of_cities = eval(input()) # create list from formatted string
+
+# travel_log = [
+#   {
+#     "country": "France",
+#     "visits": 12,
+#     "cities": ["Paris", "Lille", "Dijon"]
+#   },
+#   {
+#     "country": "Germany",
+#     "visits": 5,
+#     "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#   },
+# ]
+# # Do NOT change the code above 👆
+
+# # TODO: Write the function that "will allow new countries
+# # to be added to the travel_log. 
+# def add_new_country(func_country, func_visits, func_list_of_cities):
+#     travel_log.append({"country": func_country, "visits": func_visits, "cities": func_list_of_cities})
+#     # print(travel_log)
+
+# # Do not change the code below 👇
+# add_new_country(country, visits, list_of_cities)
+# print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+# print(f"My favourite city was {travel_log[2]['cities'][0]}.")
 
 
 
-country = input() # Add country name
-visits = int(input()) # Number of visits
-list_of_cities = eval(input()) # create list from formatted string
+# -------------- Homework exercise: --------------
 
-travel_log = [
-  {
-    "country": "France",
-    "visits": 12,
-    "cities": ["Paris", "Lille", "Dijon"]
-  },
-  {
-    "country": "Germany",
-    "visits": 5,
-    "cities": ["Berlin", "Hamburg", "Stuttgart"]
-  },
-]
-# Do NOT change the code above 👆
+from day9_art import logo
+#to create a local clear_screen function()
+import os
+import platform
 
-# TODO: Write the function that "will allow new countries
-# to be added to the travel_log. 
-def add_new_country(func_country, func_visits, func_list_of_cities):
-    travel_log.append({"country": func_country, "visits": func_visits, "cities": func_list_of_cities})
-    # print(travel_log)
+print(logo)
+print("Welcome to the secret auction program.")
 
-# Do not change the code below 👇
-add_new_country(country, visits, list_of_cities)
-print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
-print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+#clear screen function
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system('cls')  # For Windows
+    else:
+        os.system('clear')  # For Unix/Linux/MacOS
+
+
+def highest_bidder():
+    highest_bidder_name = "none"
+    highest_bidder_bid = 0
+    
+    for key in bidders_dict:
+        if bidders_dict[key] > highest_bidder_bid:
+            highest_bidder_bid = bidders_dict[key]
+            highest_bidder_name = key
+            
+    print(f"The winner is {highest_bidder_name} with a bid of ${highest_bidder_bid}")
+
+
+
+#initialization
+bidders_dict = {}
+more_bidders = "yes"
+
+
+while more_bidders == "yes":
+    #get user information
+    name = input("What's your name?: ")
+    bid = int(input("What's your bid?: "))
+
+    #store user data in a dict
+    bidders_dict[name] = bid
+
+    more_bidders = input("Are there any other bidders? Type 'yes' or 'no'.")
+    clear_screen()
+    
+    
+
+print(bidders_dict)
+
+highest_bidder()
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
