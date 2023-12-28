@@ -51,6 +51,10 @@
 
 # -------------- Homework exercise: --------------
 
+from art import logo
+
+
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 
             'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 
             'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 
@@ -60,40 +64,27 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-def encrypt(plain_text, shift_amount):
-    cipher_text = []
-    for letter in plain_text:
-        position = alphabet.index(letter)
-        new_position = position + shift_amount
-        cipher_text.append(alphabet[new_position])
+def caesar(user_text, shift_amount, user_direction):
+    if direction == "encode":
+        encrypted_text = []
+        for letter in user_text:
+            position = alphabet.index(letter)
+            new_position = position + shift_amount
+            encrypted_text.append(alphabet[new_position])
+        joined_encoded_text = ''.join(encrypted_text)
+        print(f'The encoded text is "{joined_encoded_text}"')
         
-    joined_encoded_word = ''.join(cipher_text)
-    print(f'The encoded text is "{joined_encoded_word}"')
-
-def decrypt(cipher_text, shift_amount):
-    deciphered_text = []
-    reversed_alphabet = alphabet[::-1]
-    for letter in cipher_text:
-        position = reversed_alphabet.index(letter)
-        new_position = position + shift_amount
-        deciphered_text.append(reversed_alphabet[new_position])
+    elif direction == "decode":
+        decrypted_text = []
+        reversed_alphabet = alphabet[::-1]
+        for letter in user_text:
+            position = reversed_alphabet.index(letter)
+            new_position = position + shift_amount
+            decrypted_text.append(reversed_alphabet[new_position])
+        joined_decrypted_text = ''.join(decrypted_text)
+        print(f'The decoded text is "{joined_decrypted_text}"')
         
-    joined_decrypted_word = ''.join(deciphered_text)
-    print(f'The decoded text is "{joined_decrypted_word}"')
+    else:
+        print("You can't type...")
 
-if direction == "encode":
-    encripted_word = encrypt(plain_text=text, shift_amount=shift)
-elif direction == "decode":
-    decripted_word = decrypt(cipher_text=text, shift_amount=shift)
-else:
-    print("You can't type...")
-
-
-
-
-
-
-#TODO-3: Check if the user wanted to encrypt or decrypt the message 
-# by checking the 'direction' variable. Then call the correct function 
-# based on that 'drection' variable. You should be able to test the 
-# code to encrypt *AND* decrypt a message.
+caesar(user_text=text, shift_amount=shift, user_direction=direction)
