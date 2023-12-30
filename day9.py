@@ -165,12 +165,12 @@ while more_bidders == "yes":
     #store user data in a dict
     bidders_dict[name] = bid
 
-    more_bidders = input("Are there any other bidders? Type 'yes' or 'no'.")
+    more_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ")
     clear_screen()
     
     
 
-print(bidders_dict)
+# print(bidders_dict)
 
 highest_bidder()
     
