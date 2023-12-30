@@ -48,8 +48,19 @@
 
 # -------------- Home class work exercise --------------
 
-from replit import clear
-from art import logo
+#to create a local clear_screen function()
+import os
+import platform
+
+from day10_art import logo
+
+#clear screen function
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system('cls')  # For Windows
+    else:
+        os.system('clear')  # For Unix/Linux/MacOS
+
 
 def add(n1, n2):
   return n1 + n2
