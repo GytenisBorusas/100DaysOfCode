@@ -59,3 +59,72 @@
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
+
+import random
+from day11_art import logo
+
+#to create a local clear_screen function()
+import os
+import platform
+
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+start_new_game_flag = False
+
+
+#clear screen function
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system('cls')  # For Windows
+    else:
+        os.system('clear')  # For Unix/Linux/MacOS
+        
+def deal_card():
+    random_card = random.choice(cards)
+    return random_card
+
+def game_start_card_draw():
+    player_cards = []
+    pc_cards = []
+    i = 0
+    
+    for i in range(0, 2):
+        player_cards.append(deal_card())
+        pc_cards.append(deal_card())
+        
+    return player_cards, pc_cards
+        
+def calculate_hard_score(list_or_cards):
+    hand_total = 0
+    for card in list_or_cards:
+        hand_total += card
+    
+    return hand_total
+    
+    
+
+
+play_or_not_input = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+if play_or_not_input == "y":
+    start_new_game_flag = True
+    clear_screen()
+    print(logo)
+else: 
+    start_new_game_flag = False
+    
+
+    
+
+pc_cards, player_card = game_start_card_draw()
+print(pc_cards)
+print(player_card)
+
+pc_card_score = calculate_hard_score(pc_cards)
+print(pc_card_score)
+player_card_score = calculate_hard_score(player_card)
+print(player_card_score)
+
+
+
+
+
