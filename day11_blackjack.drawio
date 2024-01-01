@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-01T19:37:37.419Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="QIU5aJAoMp_v8H3cMze9" version="22.1.16" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-01T19:50:47.732Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="6BhvZlYxF72LLN3ZNH6E" version="22.1.16" type="github">
   <diagram name="Page-1" id="nkTQfTPpTCj9gXF7PHaY">
     <mxGraphModel dx="3894" dy="1586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
       <root>
@@ -172,8 +172,35 @@
         <mxCell id="LZ4RM-9YvKenWAVohu5h-20" value="You LOSE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-20" y="570" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LZ4RM-9YvKenWAVohu5h-23" target="LZ4RM-9YvKenWAVohu5h-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="LZ4RM-9YvKenWAVohu5h-23" value="Show computer second card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LZ4RM-9YvKenWAVohu5h-27" target="LZ4RM-9YvKenWAVohu5h-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-31" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LZ4RM-9YvKenWAVohu5h-30">
+          <mxGeometry x="-0.25" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="LZ4RM-9YvKenWAVohu5h-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-33" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LZ4RM-9YvKenWAVohu5h-32">
+          <mxGeometry x="-0.7112" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-27" value="Is it above 21?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1540" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LZ4RM-9YvKenWAVohu5h-29" value="Is it above 16?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1720" width="220" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
