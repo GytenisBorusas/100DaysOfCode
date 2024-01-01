@@ -69,6 +69,9 @@ import platform
 
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+player_cards = []
+pc_cards = []
+
 start_new_game_flag = False
 
 
@@ -79,6 +82,10 @@ def clear_screen():
     else:
         os.system('clear')  # For Unix/Linux/MacOS
         
+        
+        
+        
+        
 def deal_card():
     random_card = random.choice(cards)
     return random_card
@@ -86,43 +93,104 @@ def deal_card():
 def game_start_card_draw():
     player_cards = []
     pc_cards = []
-    i = 0
-    
     for i in range(0, 2):
         player_cards.append(deal_card())
         pc_cards.append(deal_card())
-        
     return player_cards, pc_cards
         
-def calculate_hard_score(list_or_cards):
+def calculate_cards_score(list_or_cards):
     hand_total = 0
     for card in list_or_cards:
         hand_total += card
-    
     return hand_total
     
+def check_for_blackjack(score):
+    if score == 21:
+        print(f"******check_for_blackjack    Score: {score}")
+        print("******Blackjack check True")
+        return "Blackjack"
+    else:
+        print(f"********check_for_blackjack    Score: {score}")
+        print("******Blackjack check False")
+        return "None"
+    
+def check_for_over21(score):
+    if score > 21:
+        print(f"******check_for_over21 score: {score}")
+        print("******Over 21 True")
+        return "Over21"
+    else:
+        print(f"******check_for_over21 score: {score}")
+        print("******Over 21 False")
+        return "None"
+
+def check_for_ace(cards_list):
+    print(f"***** check_for_ace - old card list {cards_list}")
+    for card in cards_list:
+        if card == 11:
+            card = 1
+    print(f"***** check_for_ace - new card list {cards_list}")
+    return cards_list
+
+
+
+
+def new_game():
+    play_or_not_input = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    user_cards, computer_cards = game_start_card_draw()
+    if play_or_not_input == "y":
+        start_new_game_flag = True
+        clear_screen()
+        print(logo)
+        game(user_cards, computer_cards)
+    else: 
+        start_new_game_flag = False
+
+
     
 
 
-play_or_not_input = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-if play_or_not_input == "y":
-    start_new_game_flag = True
-    clear_screen()
-    print(logo)
-else: 
-    start_new_game_flag = False
+
+
+
+
+
+def game(player_cards, pc_cards):
+    user_cards_score = calculate_cards_score(player_cards)
+    computer_cards_score = calculate_cards_score(pc_cards)
+    
+    print(f" Your cards: {player_cards}, current score: {user_cards_score}")
+    print(f" Computer's first card: {pc_cards[0]}")
+    print(f" [Computers full score {computer_cards_score} and cards {pc_cards}]")
+    
+    if check_for_blackjack(user_cards_score) == "Blackjack":
+        if check_for_blackjack(computer_cards_score) == "Blackjack":
+            print("You and Dealer has Blackjack! You lost...")
+            new_game()
+        else:
+            print("Blackjack! You WON")
+            new_game()
+    elif check_for_blackjack(computer_cards_score) == "Blackjack":
+            print("Dealer has Blackjack! You lost...")
+            new_game()
+    else:
+        if check_for_over21(user_cards_score) == "Over21":
+            check_for_ace(player_cards)
+            if check_for_over21(user_cards_score) == "Over21":
+                print(f"Player's score is over 21. You lost...")
+                new_game()
+        else:
+            addition_card = input("Type 'y' to get another card, type 'n' to pass: ")
+            if addition_card == "y":
+                player_cards.append(deal_card())
+                # print(f" Your cards: {user_cards}, current score: {user_cards_score}")
+                # print(f" Computer's first card: {computer_cards[0]}")
+                game(player_cards, pc_cards)
+            elif addition_card == "n":
+                
     
 
-    
-
-pc_cards, player_card = game_start_card_draw()
-print(pc_cards)
-print(player_card)
-
-pc_card_score = calculate_hard_score(pc_cards)
-print(pc_card_score)
-player_card_score = calculate_hard_score(player_card)
-print(player_card_score)
+new_game()
 
 
 
