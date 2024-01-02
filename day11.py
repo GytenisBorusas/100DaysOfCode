@@ -106,30 +106,30 @@ def calculate_cards_score(list_or_cards):
     
 def check_for_blackjack(score):
     if score == 21:
-        print(f"******check_for_blackjack    Score: {score}")
-        print("******Blackjack check True")
+        #print(f"******check_for_blackjack    Score: {score}")
+        #print("******Blackjack check True")
         return "Blackjack"
     else:
-        print(f"********check_for_blackjack    Score: {score}")
-        print("******Blackjack check False")
+        #print(f"********check_for_blackjack    Score: {score}")
+        #print("******Blackjack check False")
         return "None"
     
 def check_for_over21(score):
     if score > 21:
-        print(f"******check_for_over21 score: {score}")
-        print("******Over 21 True")
+        #print(f"******check_for_over21 score: {score}")
+        #print("******Over 21 True")
         return "Over21"
     else:
-        print(f"******check_for_over21 score: {score}")
-        print("******Over 21 False")
+        #print(f"******check_for_over21 score: {score}")
+        #print("******Over 21 False")
         return "None"
 
 def check_for_ace(cards_list):
-    print(f"***** check_for_ace - old card list {cards_list}")
+    #print(f"***** check_for_ace - old card list {cards_list}")
     for card in cards_list:
         if card == 11:
             card = 1
-    print(f"***** check_for_ace - new card list {cards_list}")
+    #print(f"***** check_for_ace - new card list {cards_list}")
     return cards_list
 
 
@@ -161,7 +161,7 @@ def game(player_cards, pc_cards):
     
     print(f" Your cards: {player_cards}, current score: {user_cards_score}")
     print(f" Computer's first card: {pc_cards[0]}")
-    print(f" [Computers full score {computer_cards_score} and cards {pc_cards}]")
+    #print(f" [Computers full score {computer_cards_score} and cards {pc_cards}]")
     
     if check_for_blackjack(user_cards_score) == "Blackjack":
         if check_for_blackjack(computer_cards_score) == "Blackjack":
@@ -183,15 +183,16 @@ def game(player_cards, pc_cards):
             addition_card = input("Type 'y' to get another card, type 'n' to pass: ")
             if addition_card == "y":
                 player_cards.append(deal_card())
-                # print(f" Your cards: {user_cards}, current score: {user_cards_score}")
-                # print(f" Computer's first card: {computer_cards[0]}")
+                user_cards_score = calculate_cards_score(player_cards)
+                # print(f" Your cards: {player_cards}, current score: {user_cards_score}")
+                # print(f" Computer's first card: {pc_cards[0]}")
                 game(player_cards, pc_cards)
             elif addition_card == "n":
                 while computer_cards_score < 17:
-                    print(computer_cards_score)
+                    # print(computer_cards_score)
                     pc_cards.append(deal_card())
                     computer_cards_score = calculate_cards_score(pc_cards)
-                    print(pc_cards)
+                    # print(pc_cards)
                 if check_for_over21(computer_cards_score) == "Over21":
                     print(f"PC's score is over 21. You WON!")
                     new_game()
