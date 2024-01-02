@@ -187,8 +187,30 @@ def game(player_cards, pc_cards):
                 # print(f" Computer's first card: {computer_cards[0]}")
                 game(player_cards, pc_cards)
             elif addition_card == "n":
-                
-    
+                while computer_cards_score < 17:
+                    print(computer_cards_score)
+                    pc_cards.append(deal_card())
+                    computer_cards_score = calculate_cards_score(pc_cards)
+                    print(pc_cards)
+                if check_for_over21(computer_cards_score) == "Over21":
+                    print(f"PC's score is over 21. You WON!")
+                    new_game()
+                else:
+                    if user_cards_score > computer_cards_score:
+                        print(f"Your final hand {player_cards}, final score: {user_cards_score}.")
+                        print(f"Computer's final hand {pc_cards}, final score: {computer_cards_score}.")
+                        print(f"Your score is higher. You WON!")
+                        new_game()
+                    elif user_cards_score < computer_cards_score:
+                        print(f"Your final hand {player_cards}, final score: {user_cards_score}.")
+                        print(f"Computer's final hand {pc_cards}, final score: {computer_cards_score}.")
+                        print(f"Computer's score is higher. You lost.")
+                        new_game()
+                    else: 
+                        print(f"Your final hand {player_cards}, final score: {user_cards_score}.")
+                        print(f"Computer's final hand {pc_cards}, final score: {computer_cards_score}.")
+                        print(f"Score is equal. Its a draw...")
+                        new_game()
 
 new_game()
 
