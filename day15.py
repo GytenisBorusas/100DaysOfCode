@@ -1,4 +1,3 @@
-
 from day15_menu import MENU, resources
 
 
@@ -19,20 +18,25 @@ def money_count(quarters_in, dimes_in, nickles_in, pennies_in):
 
 
 def check_resources(
-    water_needed, milk_needed, coffee_needed, 
-    water_resource, milk_resource, coffee_resource):
+    water_needed,
+    milk_needed,
+    coffee_needed,
+    water_resource,
+    milk_resource,
+    coffee_resource,
+):
     water = False
     milk = False
     coffee = False
     text = None
-    
+
     if water_resource >= water_needed:
         water = True
     if milk_resource >= milk_needed:
         milk = True
     if coffee_resource >= coffee_needed:
         coffee = True
-        
+
     if water == True and milk == True and coffee == True:
         text = None
     elif water == False and milk == True and coffee == True:
@@ -50,36 +54,42 @@ def check_resources(
     elif water == False and milk == False and coffee == False:
         text = "Sorry there is not enough water, milk, and coffee"
     return text
-    
-    
+
+
 def retrieve_recipe(name):
-    water = MENU[name]['ingredients']['water']
-    milk = MENU[name]['ingredients'].get('milk', 0)
-    coffee = MENU[name]['ingredients']['coffee']
-    cost = MENU[name]['cost']
+    water = MENU[name]["ingredients"]["water"]
+    milk = MENU[name]["ingredients"].get("milk", 0)
+    coffee = MENU[name]["ingredients"]["coffee"]
+    cost = MENU[name]["cost"]
     return water, milk, coffee, cost
-    
-    
+
+
 def coffee_machine(coffee_choice):
     global water_total
     global milk_total
     global coffee_total
     global money_total
-    
+
     water, milk, coffee, cost = retrieve_recipe(coffee_choice)
     text = check_resources(
-        water_resource=water_total, water_needed=water, 
-        milk_resource=milk_total, milk_needed=milk,
-        coffee_resource=coffee_total, coffee_needed=coffee)
+        water_resource=water_total,
+        water_needed=water,
+        milk_resource=milk_total,
+        milk_needed=milk,
+        coffee_resource=coffee_total,
+        coffee_needed=coffee,
+    )
     if text == None:
         quarters_input = int(input("How many quarters: "))
         dimes_input = int(input("How many dimes: "))
         nickles_input = int(input("How many nickles: "))
         pennies_input = int(input("How many pennies]: "))
-        total_input_money = money_count(quarters_in=quarters_input, 
-                    dimes_in=dimes_input, 
-                    nickles_in=nickles_input, 
-                    pennies_in=pennies_input)
+        total_input_money = money_count(
+            quarters_in=quarters_input,
+            dimes_in=dimes_input,
+            nickles_in=nickles_input,
+            pennies_in=pennies_input,
+        )
         if total_input_money >= cost:
             water_total -= water
             milk_total -= milk
@@ -96,11 +106,11 @@ def coffee_machine(coffee_choice):
             print("Sorry that's not enough money. Money Refunded")
     else:
         print(text)
-    
 
-water_total = resources['water'] #300
-milk_total = resources['milk'] #200
-coffee_total = resources['coffee'] #100
+
+water_total = resources["water"]  # 300
+milk_total = resources["milk"]  # 200
+coffee_total = resources["coffee"]  # 100
 money_total = 0.0
 
 off_fuctionality = False
@@ -118,9 +128,3 @@ while off_fuctionality == False:
         report()
     elif user_input == "off":
         off_fuctionality = True
-    
-    
-    
-
-
-
