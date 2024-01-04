@@ -13,17 +13,14 @@
 #     total_bill += 20
 # else:
 #     total_bill += 15
-    
+
 # if add_pepperoni == "Y" and size == "S":
 #     total_bill += 2
 # elif (add_pepperoni == "Y" and size == "M") or (add_pepperoni == "Y" and size == "L"):
 #     total_bill += 3
-    
+
 # if extra_cheese == "Y":
 #     total_bill += 1
-    
-
-
 
 
 # Other small exercise
@@ -52,8 +49,8 @@
 # for letter in name2:
 #     if letter in true_list:
 #         score1 += 1
-        
-    
+
+
 # for letter in name1:
 #     if letter in love_list:
 #         score2 += 1
@@ -61,8 +58,8 @@
 # for letter in name2:
 #     if letter in love_list:
 #         score2 += 1
-        
-        
+
+
 # sum = str(score1) + str(score2)
 
 # if (int(sum) < 10) or (int(sum) > 90):
@@ -73,10 +70,9 @@
 #     print(f"Your score is {sum}.")
 
 
-
-
 # main day exercise
-print('''
+print(
+    '''
 *******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -97,13 +93,14 @@ ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
 ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
-''')
+'''
+)
 print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.") 
+print("Your mission is to find the treasure.")
 
-#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+# https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 
 
 choice1 = input("Choose left or right?").lower()
@@ -120,7 +117,7 @@ if choice1 == "left":
             print("You WOOOOOON!")
         else:
             print("You died!")
-            
+
     else:
         print("You died!")
 else:

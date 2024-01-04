@@ -1,6 +1,3 @@
-
-
-
 print("Welcome to the tip calculator.")
 
 total_bill = input("What was the total bill? $")

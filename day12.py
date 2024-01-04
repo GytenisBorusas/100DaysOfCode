@@ -13,8 +13,6 @@
 # # local Scope
 
 
-
-
 # ################### HW project ####################
 
 import random
@@ -29,20 +27,21 @@ def random_number():
     random_number = random.choice(numbers_list)
     return random_number
 
+
 def intro():
     attempts = 0
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100")
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
-    if difficulty == 'easy':
+    if difficulty == "easy":
         attempts = 10
-    elif difficulty == 'hard':
+    elif difficulty == "hard":
         attempts = 5
     else:
         print("You have made a typing mistake...")
     return attempts
-    
+
 
 def game(guesses_left, number):
     while guesses_left > 0:
@@ -59,12 +58,7 @@ def game(guesses_left, number):
             return
     print("You have lost the game.")
 
+
 remaining_guesses = intro()
 guessing_target_number = random_number()
 game(guesses_left=remaining_guesses, number=guessing_target_number)
-
-
-
-
-
-

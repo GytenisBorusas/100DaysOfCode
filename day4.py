@@ -37,35 +37,37 @@
 ################# Homework exercise:
 import random
 
-rock = '''
+rock = """
     _______
 ---'   ____)
       (_____)
       (_____)
       (____)
 ---.__(___)
-'''
+"""
 
-paper = '''
+paper = """
     _______
 ---'   ____)____
           ______)
           _______)
          _______)
 ---.__________)
-'''
+"""
 
-scissors = '''
+scissors = """
     _______
 ---'   ____)____
           ______)
        __________)
       (____)
 ---.__(___)
-'''
+"""
 
-players_choice = int(input("What do yo u choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
-pc_choice = random.randint(0,2)
+players_choice = int(
+    input("What do yo u choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. ")
+)
+pc_choice = random.randint(0, 2)
 
 if players_choice == 0:
     print(rock)
@@ -73,7 +75,7 @@ elif players_choice == 1:
     print(paper)
 else:
     print(scissors)
-    
+
 print("Computer choose:")
 
 if pc_choice == 0:
@@ -82,8 +84,8 @@ elif pc_choice == 1:
     print(paper)
 else:
     print(scissors)
-    
-    
+
+
 if players_choice == 0 and pc_choice == 0:
     print("Draw")
 elif players_choice == 0 and pc_choice == 1:
@@ -104,7 +106,4 @@ elif players_choice == 2 and pc_choice == 2:
     print("Draw!")
 
 
-
-
-#Write your code below this line 👇
-
+# Write your code below this line 👇
