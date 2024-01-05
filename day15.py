@@ -2,6 +2,7 @@ from day15_menu import MENU, resources
 
 
 def report():
+    """Prints a report of the water(ml), milk(ml), coffee(g), and money($) balance"""
     print(f" Water: {water_total}ml")
     print(f" Milk: {milk_total}ml")
     print(f" Coffee: {coffee_total}g")
@@ -9,6 +10,9 @@ def report():
 
 
 def money_count(quarters_in, dimes_in, nickles_in, pennies_in):
+    """Counts all the coin inserted to the coffee machine
+    inputs: quarters, dimes, nickles, pennies
+    output: sum"""
     quarters = quarters_in * 0.25
     dimes = dimes_in * 0.10
     nickles = nickles_in * 0.05
@@ -25,6 +29,10 @@ def check_resources(
     milk_resource,
     coffee_resource,
 ):
+    """Checks if the resources needed are sufficient for the drink
+    Inputs: water, milk, coffee
+    Outputs: text(None for sufficient resources and text error for insufficient resources.)
+    """
     water = False
     milk = False
     coffee = False
@@ -57,6 +65,9 @@ def check_resources(
 
 
 def retrieve_recipe(name):
+    """Pulls in the data from the MENU.
+    Inputs: name(of the drink)
+    Outputs: water, milk, coffee, cost"""
     water = MENU[name]["ingredients"]["water"]
     milk = MENU[name]["ingredients"].get("milk", 0)
     coffee = MENU[name]["ingredients"]["coffee"]
