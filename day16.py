@@ -1,9 +1,4 @@
-
-
-
 # # from turtle import Turtle, Screen
-
-
 
 
 # # timmy = Turtle()
@@ -16,11 +11,9 @@
 # # print(timmy.position())
 
 
-
 # # my_screen = Screen()
 # # print(my_screen.canvheight)
 # # my_screen.exitonclick()
-
 
 
 # from prettytable import PrettyTable
@@ -32,7 +25,6 @@
 # table.add_row(["Squirtle", "Water"])
 # table.add_row(["Charmander", "Fire"])
 # table.align = "l"
-
 
 
 # print(table)
@@ -62,13 +54,7 @@ while is_on == True:
         money_machine.report()
     else:
         drink = menu.find_drink(choice)
-        if coffe_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+        if coffe_maker.is_resource_sufficient(drink) and money_machine.make_payment(
+            drink.cost
+        ):
             coffe_maker.make_coffee(drink)
-    
-
-
-
-
-
-
-
